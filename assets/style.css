@@ -226,7 +226,7 @@ footer {
     height: 20vh;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 footer h2{
     font-size: 1.5rem;
