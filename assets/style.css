@@ -4,7 +4,7 @@
     --dark-blue: #46627A;
     --blue2: #c6d8db;
     --glass: #ffffff28;
-    --fonte: 'Playfair Display';
+    --glass2: #c6d8db8a;
     --fonte1: 'Roboto';
     --fonte2: 'REM';
 }
@@ -83,6 +83,10 @@ nav {
     justify-content: space-between;
     padding: 2rem;
     height: 50px;
+}
+
+#button-menu, #menu-list{
+    display: none;
 }
 /* AREA PRINCIPAL */
 #area-principal {
@@ -283,7 +287,8 @@ footer li {
     height: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 620px) {
+    #mobile-list{display: none;}
     body {
         background: url(imagens/castelo\ animado\ .jpg);
         background-color: var(--blue2);
@@ -291,42 +296,50 @@ footer li {
         background-repeat: no-repeat;
         background-position: center center;
     }
-    h4{
+    nav{
+        background-color: var(--glass2);
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding: 1em;
+        height: 4rem;
+    }
+    h4, #button-menu, #mobile-list li{
         letter-spacing: 0.3rem;
         font-size: 18px;
+        text-transform: uppercase;
     }
-    h1, h2, h3, h5, h6 {
-        font-size: 1.2rem;
-    }   
-    nav {
-        padding: 1rem;  
-        flex-direction: column;   
+    h4{font-size: 22px;}
+
+    #button-menu{
+        border-bottom: 1px solid var(--branco);
+        color: var(--branco);   
+        background-color: transparent;
+        display: block;
+        border: none;
+        width: 65px;
     }
-    nav ul a:hover {
-        font-size: 14px;
-        font-weight: 100;
-        border-bottom: none;
-        padding: 0;
-    } 
-    ul {
-        margin-top: 8px;
-        padding: 5px;
-        border-top: 1px solid var(--glass);
-        border-bottom: 1px solid var(--glass);
+    #mobile-list{ 
+        background-color: var(--glass2);
+        display: none;
+        flex-direction: column;     
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        position: absolute;
+        top: 4rem;
+        z-index: 11;
+    }
+    #mobile-list li{
+        background-color: var(--blue2);
+        border-bottom: 1px solid var(--branco);       
+        width: 100%;
+        height: 7%;
+        text-align: center;
     }
     #area-principal {
-        width: 350px;
-        font-size: 16px;
-        text-align: left;
-        align-items: start;
+        width: 500px;
         margin: 130px 10px;
-    }
-    #area-principal h1, #area-principal p{
-        margin-bottom: 20px;
-        margin-top: 0;
-    }
-    #area-principal a {
-        display: none;
     }
     #area-principal a:hover {
         color: var(--dark-blue);   
@@ -336,42 +349,27 @@ footer li {
     }
     #resumo-film {
         height: auto;
-        width: 400px;
+        width: 550px;
     }
     #resumo-film div {
         padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
     #resumo-film div > img {
-        width: 180px;
+        width: 250px;
         filter: none;
-    }
-    #resumo-film h2 {
-        color: var(--dark-blue);
-        font-weight: 600;
     }
     .content {
         display: grid;
         margin: auto;
         height: auto;
     }
-    .face {
-        height: 300px;
-    }
     footer {
         height: auto;
     }
-    footer li {
-        display: block;
-        padding: 1px;
-    }
     #sobre-mim {
         width: 100%;
-        display: block;
-    }
-    #profile, #redes-social {
-        width: 100%;
+        display: flex;
+        margin: 0 auto;
     }
     #redes-social a:hover {
         border: none;
@@ -380,9 +378,76 @@ footer li {
         display: none;
     }
     #container-slide {
-        min-height: 60vh;
+        min-height: 50vh;
     }
     .container-imagens{
-        width: 400px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background: url(imagens/castelo\ animado\ 600.jpg);
+        background-color: var(--blue2);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    h1, h2, h3, h5, h6 {
+        font-size: 1.2rem;
+    }   
+    nav { 
+        flex-direction: column;
+    }
+    #button-menu{margin-top: 5px;}
+    #area-principal {
+        width: 350px;
+        height: 200px;
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    #area-principal h1, #area-principal p{
+        margin-bottom: 20px;
+        margin-top: 0;      
+    }
+    #area-principal a {
+        display: none;
+    }
+    #resumo-film {
+        width: 350px;
+    }
+    #resumo-film div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #resumo-film div > img {
+        width: 180px;
+    }
+    #resumo-film h2 {
+        color: var(--dark-blue);
+        font-weight: 600;
+    }
+    .face {
+        height: 300px;
+    }
+    footer li {
+        display: block;
+        padding: 1px;
+    }
+    #sobre-mim {
+        width: 90%;
+        display: block;
+    }
+    #profile, #redes-social {
+        width: 80%;
+    }
+    #redes-social a:hover {
+        border: none;
+    }
+    #prev-button, #next-button {
+        display: none;
+    }
+    .container-imagens{
+        width: 360px;
     }
 }
