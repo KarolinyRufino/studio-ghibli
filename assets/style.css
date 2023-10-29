@@ -288,7 +288,7 @@ footer li {
 }
 
 @media (max-width: 620px) {
-    #mobile-list{display: none;}
+    #menu-list{display: none;}
     body {
         background: url(imagens/castelo\ animado\ .jpg);
         background-color: var(--blue2);
