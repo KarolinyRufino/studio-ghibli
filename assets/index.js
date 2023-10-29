@@ -48,7 +48,7 @@ function menuMobile(){
         }
     });
     
-    const menuItems = listMenu.getElementsByTagName('li');
+    const menuItems = listMenu.getElementsByClassName('liMobile');
     for (let i = 0; i < menuItems.length; i++){
         menuItems[i].addEventListener('click', function(){
             listMenu.style.display = 'none';
