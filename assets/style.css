@@ -30,6 +30,9 @@ body {
     font-size: 14px;
     color: #444444;
 }
+.textMobile{
+    display: none;
+}
 /* SCROLL BAR FIREFOX*/
 body {
     scrollbar-width: thin;          
@@ -290,18 +293,19 @@ footer li {
 @media (max-width: 620px) {
     #menu-list{display: none;}
     body {
-        background: url(imagens/castelo\ animado\ .jpg);
+        background: url(imagens/pngegg.png);
         background-color: var(--blue2);
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center 30%;
     }
+
     nav{
         background-color: var(--glass2);
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        margin: 0 auto;
-        padding: 1em;
+        padding: 0.5em;
         height: 4rem;
     }
     h4, #button-menu, #mobile-list li{
@@ -309,7 +313,7 @@ footer li {
         font-size: 18px;
         text-transform: uppercase;
     }
-    h4{font-size: 22px;}
+    h4{font-size: 35px;}
 
     #button-menu{
         border-bottom: 1px solid var(--branco);
@@ -338,13 +342,19 @@ footer li {
         text-align: center;
     }
     #area-principal {
-        width: 500px;
-        margin: 130px 10px;
+        width: 95%;
+        height: 30%;
+        margin: 150px 10px;
+        color: var(--dark-blue);
+        text-align: center;
+        align-self: flex-end;
     }
-    #area-principal a:hover {
+    #area-principal a{
         color: var(--dark-blue);   
-        border: 1px solid var(--branco);
-        box-shadow: none;
+        font-weight: 600;
+        border: none;
+        box-shadow: 5px 5px 13px #a8b8ba,
+                   -5px -5px 13px #e4f8fc;
         transition: none; 
     }
     #resumo-film {
@@ -387,31 +397,20 @@ footer li {
 
 @media (max-width: 480px) {
     body {
-        background: url(imagens/castelo\ animado\ 600.jpg);
+        background: url(imagens/pngegg.png);
         background-color: var(--blue2);
-        background-size: cover;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center 20%;
     }
     h1, h2, h3, h5, h6 {
         font-size: 1.2rem;
-    }   
-    nav { 
-        flex-direction: column;
     }
+    h4{font-size: 25px;} 
     #button-menu{margin-top: 5px;}
-    #area-principal {
-        width: 350px;
-        height: 200px;
-        font-size: 16px;
-        margin-top: 50px;
-    }
     #area-principal h1, #area-principal p{
         margin-bottom: 20px;
         margin-top: 0;      
-    }
-    #area-principal a {
-        display: none;
     }
     #resumo-film {
         width: 350px;
